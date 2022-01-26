@@ -5,7 +5,7 @@ const geocode = (address, callback) => {
         callback('location name should not be empty')
         return
     }
-    const url = 'http://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoicmFtYW5heWFkYXZzIiwiYSI6ImNreWgyeW0wOTF5eXcyd284eDVrZTc2YnIifQ.kcmDDtPAtI4ypQg_8xRkcg&limit=1'
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoicmFtYW5heWFkYXZzIiwiYSI6ImNreWgyeW0wOTF5eXcyd284eDVrZTc2YnIifQ.kcmDDtPAtI4ypQg_8xRkcg&limit=1'
     request({url: url, json: true}, (error, response) => {
         if(error){
             callback('Unable to connect location services!', undefined)
